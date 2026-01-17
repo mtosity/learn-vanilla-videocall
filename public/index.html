@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Video Call</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="setup-container">
+        <h1>Simple Video Call</h1>
+        <input type="text" id="name-input" placeholder="Enter your name" maxlength="20">
+        <button id="join-btn">Join Call</button>
+    </div>
+
+    <div id="call-container" style="display: none;">
+        <div id="videos-container">
+            <video id="local-video" autoplay muted playsinline></video>
+            <div id="remote-videos"></div>
+        </div>
+        <button id="leave-btn">Leave Call</button>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
